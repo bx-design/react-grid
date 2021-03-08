@@ -1,0 +1,4 @@
+coverage
+*.snap
+*.css
+*.css.map

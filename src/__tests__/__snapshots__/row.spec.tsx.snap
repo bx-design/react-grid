@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row render Row component 1`] = `
+<div
+  class="row"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with align items props 1`] = `
+<div
+  class="row align-items-start align-items-sm-stretch align-items-md-baseline align-items-lg-center align-items-xl-end align-items-xxl-end"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with gutter props 1`] = `
+<div
+  class="row g-0 g-sm-1 g-md-2 g-lg-3 g-xl-4 g-xxl-5 gx-0 gx-sm-1 gx-md-2 gx-lg-3 gx-xl-4 gx-xxl-5 gy-0 gy-sm-1 gy-md-2 gy-lg-3 gy-xl-4 gy-xxl-5"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with justify-content props 1`] = `
+<div
+  class="row justify-content-around justify-content-sm-between justify-content-md-center justify-content-lg-end justify-content-xl-evenly justify-content-xxl-start"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with margin props 1`] = `
+<div
+  class="row m-1 m-sm-1 m-md-1 m-lg-1 m-xl-1 m-xxl-1 mx-1 mx-sm-1 mx-md-1 mx-lg-1 mx-xl-1 mx-xxl-1 my-1 my-sm-1 my-md-1 my-lg-1 my-xl-1 my-xxl-1 mb-1 mb-sm-1 mb-md-1 mb-lg-1 mb-xl-1 mb-xxl-1 mt-1 mt-sm-1 mt-md-1 mt-lg-1 mt-xl-1 mt-xxl-1 ms-1 ms-sm-1 ms-md-1 ms-lg-1 ms-xl-1 ms-xxl-1 me-1 me-sm-1 me-md-1 me-lg-1 me-xl-1 me-xxl-1"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with padding props 1`] = `
+<div
+  class="row p-0 p-sm-1 p-md-2 p-lg-3 p-xl-4 p-xxl-5 px-0 px-sm-1 px-md-2 px-lg-3 px-xl-4 px-xxl-5 py-0 py-sm-1 py-md-2 py-lg-3 py-xl-4 py-xxl-5 pb-0 pb-sm-1 pb-md-2 pb-lg-3 pb-xl-4 pb-xxl-5 pt-0 pt-sm-1 pt-md-2 pt-lg-3 pt-xl-4 pt-xxl-5 ps-0 ps-sm-1 ps-md-2 ps-lg-3 ps-xl-4 ps-xxl-5 pe-0 pe-sm-1 pe-md-2 pe-lg-3 pe-xl-4 pe-xxl-5"
+  data-testid="row"
+/>
+`;
+
+exports[`Row render Row with row props 1`] = `
+<div
+  class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 row-cols-xll-6"
+  data-testid="row"
+/>
+`;
