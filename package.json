@@ -1,6 +1,6 @@
 {
-  "name": "react-grid",
-  "version": "0.1.0",
+  "name": "@bx-design/react-grid",
+  "version": "0.1.0-beta.1",
   "repository": "git@github.com:bx-design/react-grid.git",
   "author": "BX Creative Studio",
   "license": "MIT",
@@ -12,9 +12,11 @@
     "esm/**"
   ],
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs",
+    "build": "yarn build:esm && yarn build:cjs && yarn build:css-dist && yarn build:css-esm",
     "build:cjs": "rimraf ./dist && ncc build src/index.tsx -o dist -m -e react",
     "build:esm": "rimraf ./esm && tsc --module ES6 --outDir esm",
+    "build:css-dist": "cpy 'src/styles/bx-grid.min.css' dist/styles",
+    "build:css-esm": "cpy 'src/styles/bx-grid.min.css' esm/styles",
     "watch": "tsc --watch",
     "watch:esm": "tsc --module ES6 --outDir esm --target esnext --watch",
     "types:check": "tsc --noEmit",
@@ -47,7 +49,10 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "@vercel/ncc": "^0.27.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.2.1",
     "babel-eslint": "^10.1.0",
+    "cp-cli": "^2.0.0",
+    "cpy-cli": "^3.1.1",
     "eslint": "^7.21.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",

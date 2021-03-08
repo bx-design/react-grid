@@ -1,5 +1,4 @@
 export { default as Container } from './container'
 export { default as Row } from './row'
 export { default as Col } from './col'
-export { default as BxGridProvider } from './grid-provider'
 export type { RowPropsTypes, ColPropsTypes, ContainerProps } from './types'
