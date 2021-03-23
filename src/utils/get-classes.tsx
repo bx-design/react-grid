@@ -153,7 +153,7 @@ const getGutterClasses = (props: GutterProps): Array<string> => [
   props.gLg && props.gLg !== undefined ? 'g-lg-' + props.gLg : '',
   props.gXl && props.gXl !== undefined ? 'g-xl-' + props.gXl : '',
   props.gXxl && props.gXxl !== undefined ? 'g-xxl-' + props.gXxl : '',
-  props.gy && props.gy !== undefined ? 'gx-' + props.gy : '',
+  props.gx && props.gx !== undefined ? 'gx-' + props.gx : '',
   props.gySm && props.gySm !== undefined ? 'gx-sm-' + props.gySm : '',
   props.gyMd && props.gyMd !== undefined ? 'gx-md-' + props.gyMd : '',
   props.gyLg && props.gyLg !== undefined ? 'gx-lg-' + props.gyLg : '',
