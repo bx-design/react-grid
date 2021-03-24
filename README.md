@@ -197,18 +197,18 @@ const SomeComponent = () => {
 | visibleLg | boolean | undefined | lg |
 | visibleXl | boolean | undefined | xl |
 | visibleXll | boolean | undefined | xxl |
-| justifyContent | "start", "end", "center", "between", "around", "evenly" | undefined | all |
-| justifyContentSm | "start", "end", "center", "between", "around", "evenly" | undefined | sm |
-| justifyContentMd | "start", "end", "center", "between", "around", "evenly" | undefined | md |
-| justifyContentLg | "start", "end", "center", "between", "around", "evenly" | undefined | lg |
-| justifyContentXl | "start", "end", "center", "between", "around", "evenly" | undefined | xl |
-| justifyContentXxl | "start", "end", "center", "between", "around", "evenly" | undefined | xxl |
-| alignItems | "start", "end", "center", "baseline", "stretch" | undefined | all |
-| alignItemsSm | "start", "end", "center", "baseline", "stretch" | undefined | sm |
-| alignItemsMd | "start", "end", "center", "baseline", "stretch" | undefined | md |
-| alignItemsLg | "start", "end", "center", "baseline", "stretch" | undefined | lg |
-| alignItemsXl | "start", "end", "center", "baseline", "stretch" | undefined | xl |
-| alignItemsXxl | "start", "end", "center", "baseline", "stretch" | undefined | xxl |
+| order | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | all |
+| orderSm | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | sm |
+| orderMd | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | md |
+| orderLg | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | lg |
+| orderXl | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | xl |
+| orderXll | 'first' , '0' , '1' , '2' , '3' , '4' , '5' , 'last' | undefined | xxl |
+| offset | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | all |
+| offsetSm | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | sm |
+| offsetMd | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | md |
+| offsetLg | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | lg |
+| offsetXl | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | xl |
+| offsetXll | '1' , '2' , '3' , '4' , '5' , '6' , '7' , '8' , '9' , '10' , '11' | undefined | xxl |
 | m | "auto", "1", "2", "3", "4", "5", "0" | undefined | all |
 | mSm | "auto", "1", "2", "3", "4", "5", "0" | undefined | sm |
 | mMd | "auto", "1", "2", "3", "4", "5", "0" | undefined | md |
