@@ -47,6 +47,28 @@ export type OffsetTypes =
   | '10'
   | '11'
 
+export type VisibleTypes = boolean
+
+export type VisibleProps = {
+  visible?: VisibleTypes
+  visibleSm?: VisibleTypes
+  visibleMd?: VisibleTypes
+  visibleLg?: VisibleTypes
+  visibleXl?: VisibleTypes
+  visibleXll?: VisibleTypes
+}
+
+export type HiddenTypes = boolean
+
+export type HidddenProps = {
+  hidden?: HiddenTypes
+  hiddenSm?: HiddenTypes
+  hiddenMd?: HiddenTypes
+  hiddenLg?: HiddenTypes
+  hiddenXl?: HiddenTypes
+  hiddenXll?: HiddenTypes
+}
+
 export type MarginProps = {
   m?: MarginTypes
   mSm?: MarginTypes
@@ -223,7 +245,9 @@ export type ColPropsTypes = ColProps &
   OrderProps &
   OffsetProps &
   MarginProps &
-  PaddingProps
+  PaddingProps &
+  VisibleProps &
+  HidddenProps
 
 export type ContainerProps = {
   fluid?: boolean

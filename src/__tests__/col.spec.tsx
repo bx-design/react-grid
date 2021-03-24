@@ -277,4 +277,40 @@ describe('Col', () => {
     expect(col).toHaveClass('pe-xl-4')
     expect(col).toHaveClass('pe-xxl-5')
   })
+
+  test('remder Col with visible props', () => {
+    customRender({
+      visible: true,
+      visibleSm: true,
+      visibleMd: true,
+      visibleLg: true,
+      visibleXl: true,
+      visibleXll: true
+    })
+    const col = screen.getByTestId('col')
+    expect(col).toHaveClass('d-block')
+    expect(col).toHaveClass('d-sm-block')
+    expect(col).toHaveClass('d-md-block')
+    expect(col).toHaveClass('d-lg-block')
+    expect(col).toHaveClass('d-xl-block')
+    expect(col).toHaveClass('d-xll-block')
+  })
+
+  test('remder Col with hidden props', () => {
+    customRender({
+      hidden: true,
+      hiddenSm: true,
+      hiddenMd: true,
+      hiddenLg: true,
+      hiddenXl: true,
+      hiddenXll: true
+    })
+    const col = screen.getByTestId('col')
+    expect(col).toHaveClass('d-none')
+    expect(col).toHaveClass('d-sm-none')
+    expect(col).toHaveClass('d-md-none')
+    expect(col).toHaveClass('d-lg-none')
+    expect(col).toHaveClass('d-xl-none')
+    expect(col).toHaveClass('d-xll-none')
+  })
 })

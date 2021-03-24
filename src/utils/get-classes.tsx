@@ -9,7 +9,9 @@ import type {
   ColProps,
   ContainerProps,
   OrderProps,
-  OffsetProps
+  OffsetProps,
+  VisibleProps,
+  HidddenProps
 } from '../types'
 
 const getMarginClasses = (props: MarginProps): Array<string> => [
@@ -167,6 +169,24 @@ const getGutterClasses = (props: GutterProps): Array<string> => [
   props.gyXxl && props.gyXxl !== undefined ? 'gy-xxl-' + props.gyXxl : ''
 ]
 
+const getVisibleClasses = (props: VisibleProps): Array<string> => [
+  props.visible && props.visible !== undefined ? 'd-block' : '',
+  props.visibleSm && props.visibleSm !== undefined ? 'd-sm-block' : '',
+  props.visibleMd && props.visibleMd !== undefined ? 'd-md-block' : '',
+  props.visibleLg && props.visibleLg !== undefined ? 'd-lg-block' : '',
+  props.visibleXl && props.visibleXl !== undefined ? 'd-xl-block' : '',
+  props.visibleXll && props.visibleXll !== undefined ? 'd-xll-block' : ''
+]
+
+const getHiddenClasses = (props: HidddenProps): Array<string> => [
+  props.hidden && props.hidden !== undefined ? 'd-none' : '',
+  props.hiddenSm && props.hiddenSm !== undefined ? 'd-sm-none' : '',
+  props.hiddenMd && props.hiddenMd !== undefined ? 'd-md-none' : '',
+  props.hiddenLg && props.hiddenLg !== undefined ? 'd-lg-none' : '',
+  props.hiddenXl && props.hiddenXl !== undefined ? 'd-xl-none' : '',
+  props.hiddenXll && props.hiddenXll !== undefined ? 'd-xll-none' : ''
+]
+
 const getRowClasses = (props: RowProps): Array<string> => [
   'row',
   props.rowCols && props.rowCols !== undefined
@@ -244,14 +264,18 @@ export const colClasses = (
   orderProps: OrderProps,
   offsetProps: OffsetProps,
   marginProps: MarginProps,
-  paddingProps: PaddingProps
+  paddingProps: PaddingProps,
+  visibleProps: VisibleProps,
+  hiddenProps: HidddenProps
 ): string =>
   cs(
     getColClasses(colProps),
     getOrderClasses(orderProps),
     getOffsetClasses(offsetProps),
     getMarginClasses(marginProps),
-    getPaddingClasses(paddingProps)
+    getPaddingClasses(paddingProps),
+    getVisibleClasses(visibleProps),
+    getHiddenClasses(hiddenProps)
   )
 
 const getContainerClasses = (props: ContainerProps): Array<string> => [

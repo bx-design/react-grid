@@ -5,7 +5,9 @@ import type {
   OffsetProps,
   ColPropsTypes,
   MarginProps,
-  PaddingProps
+  PaddingProps,
+  VisibleProps,
+  HidddenProps
 } from './types'
 import { colClasses } from './utils/get-classes'
 
@@ -15,6 +17,8 @@ const Col: FC<ColPropsTypes> = ({ children, ...props }) => {
   const { ...offsetProps }: OffsetProps = props
   const { ...marginProps }: MarginProps = props
   const { ...paddingProps }: PaddingProps = props
+  const { ...visibleProps }: VisibleProps = props
+  const { ...hiddenProps }: HidddenProps = props
   return (
     <div
       className={colClasses(
@@ -22,7 +26,9 @@ const Col: FC<ColPropsTypes> = ({ children, ...props }) => {
         orderProps,
         offsetProps,
         marginProps,
-        paddingProps
+        paddingProps,
+        visibleProps,
+        hiddenProps
       )}
       data-testid='col'
     >
