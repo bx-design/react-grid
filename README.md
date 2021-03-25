@@ -251,24 +251,6 @@ const SomeComponent = () => {
 | meLg | "auto", "1", "2", "3", "4", "5", "0" | undefined | lg |
 | meXl | "auto", "1", "2", "3", "4", "5", "0" | undefined | xl |
 | meXxl | "auto", "1", "2", "3", "4", "5", "0" | undefined | xxl |
-| g | "1", "2", "3", "4", "5", "0" | undefined | all |
-| gSm | "1", "2", "3", "4", "5", "0" | undefined | sm |
-| gMd | "1", "2", "3", "4", "5", "0" | undefined | md |
-| gLg | "1", "2", "3", "4", "5", "0" | undefined | lg |
-| gXl | "1", "2", "3", "4", "5", "0" | undefined | xl |
-| gXxl | "1", "2", "3", "4", "5", "0" | undefined | xxl |
-| gx | "1", "2", "3", "4", "5", "0" | undefined | all |
-| gxSm | "1", "2", "3", "4", "5", "0" | undefined | sm |
-| gxMd | "1", "2", "3", "4", "5", "0" | undefined | md |
-| gxLg | "1", "2", "3", "4", "5", "0" | undefined | lg |
-| gxXl | "1", "2", "3", "4", "5", "0" | undefined | xl |
-| gxXxl | "1", "2", "3", "4", "5", "0" | undefined | xxl |
-| gy | "1", "2", "3", "4", "5", "0" | undefined | all |
-| gySm | "1", "2", "3", "4", "5", "0" | undefined | sm |
-| gyMd | "1", "2", "3", "4", "5", "0" | undefined | md |
-| gyLg | "1", "2", "3", "4", "5", "0" | undefined | lg |
-| gyXl | "1", "2", "3", "4", "5", "0" | undefined | xl |
-| gyXxl | "1", "2", "3", "4", "5", "0" | undefined | xxl |
 | p | "auto", "1", "2", "3", "4", "5", "0" | undefined | all |
 | pSm | "auto", "1", "2", "3", "4", "5", "0" | undefined | sm |
 | pMd | "auto", "1", "2", "3", "4", "5", "0" | undefined | md |

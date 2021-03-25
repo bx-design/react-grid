@@ -1,5 +1,6 @@
-import { FC } from 'react'
+import { forwardRef } from 'react'
 import type {
+  Ref,
   ColProps,
   OrderProps,
   OffsetProps,
@@ -11,7 +12,7 @@ import type {
 } from './types'
 import { colClasses } from './utils/get-classes'
 
-const Col: FC<ColPropsTypes> = ({ children, ...props }) => {
+const Col = forwardRef<Ref, ColPropsTypes>(({ children, ...props }, ref) => {
   const { ...colProps }: ColProps = props
   const { ...orderProps }: OrderProps = props
   const { ...offsetProps }: OffsetProps = props
@@ -31,11 +32,12 @@ const Col: FC<ColPropsTypes> = ({ children, ...props }) => {
         hiddenProps
       )}
       data-testid='col'
+      ref={ref}
     >
       {children}
     </div>
   )
-}
+})
 
 Col.defaultProps = {
   col: true

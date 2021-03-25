@@ -257,3 +257,5 @@ export type ContainerProps = {
   xl?: boolean
   xxl?: boolean
 }
+
+export type Ref = HTMLDivElement

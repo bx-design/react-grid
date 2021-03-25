@@ -1,5 +1,6 @@
-import { FC } from 'react'
+import { forwardRef } from 'react'
 import type {
+  Ref,
   RowProps,
   MarginProps,
   GutterProps,
@@ -10,7 +11,7 @@ import type {
 } from './types'
 import { rowClasses } from './utils/get-classes'
 
-const Row: FC<RowPropsTypes> = ({ children, ...props }) => {
+const Row = forwardRef<Ref, RowPropsTypes>(({ children, ...props }, ref) => {
   const { ...rowProps }: RowProps = props
   const { ...justifyContentProps }: JustifyContentProps = props
   const { ...alignItemsProps }: AlignItemsProps = props
@@ -28,11 +29,12 @@ const Row: FC<RowPropsTypes> = ({ children, ...props }) => {
         paddingProps
       )}
       data-testid='row'
+      ref={ref}
     >
       {children}
     </div>
   )
-}
+})
 
 Row.defaultProps = {
   rowCols: false,
