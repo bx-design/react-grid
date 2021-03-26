@@ -1,10 +1,10 @@
 import { forwardRef } from 'react'
-import type { Ref, ContainerProps } from './types'
+import type { Ref, ContainerPropsTypes } from './types'
 import { containerClasses } from './utils/get-classes'
 
-const Container = forwardRef<Ref, ContainerProps>(
+const Container = forwardRef<Ref, ContainerPropsTypes>(
   ({ children, ...props }, ref) => {
-    const { ...containerProps }: ContainerProps = props
+    const { ...containerProps }: ContainerPropsTypes = props
     return (
       <div
         className={containerClasses(containerProps)}

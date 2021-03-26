@@ -7,14 +7,14 @@ import type {
   AlignItemsProps,
   PaddingProps,
   ColProps,
-  ContainerProps,
+  ContainerPropsTypes,
   OrderProps,
   OffsetProps,
   VisibleProps,
   HidddenProps
 } from '../types'
 
-const getMarginClasses = (props: MarginProps): Array<string> => [
+export const getMarginClasses = (props: MarginProps): Array<string> => [
   props.m && props.m !== undefined ? 'm-' + props.m : '',
   props.mSm && props.mSm !== undefined ? 'm-sm-' + props.mSm : '',
   props.mMd && props.mMd !== undefined ? 'm-md-' + props.mMd : '',
@@ -59,7 +59,7 @@ const getMarginClasses = (props: MarginProps): Array<string> => [
   props.meXxl && props.meXxl !== undefined ? 'me-xxl-' + props.meXxl : ''
 ]
 
-const getPaddingClasses = (props: PaddingProps): Array<string> => [
+export const getPaddingClasses = (props: PaddingProps): Array<string> => [
   props.p && props.p !== undefined ? 'p-' + props.p : '',
   props.pSm && props.pSm !== undefined ? 'p-sm-' + props.pSm : '',
   props.pMd && props.pMd !== undefined ? 'p-md-' + props.pMd : '',
@@ -104,7 +104,7 @@ const getPaddingClasses = (props: PaddingProps): Array<string> => [
   props.peXxl && props.peXxl !== undefined ? 'pe-xxl-' + props.peXxl : ''
 ]
 
-const getJustifyContentClasses = (
+export const getJustifyContentClasses = (
   props: JustifyContentProps
 ): Array<string> => [
   props.justifyContent && props.justifyContent !== undefined
@@ -127,7 +127,7 @@ const getJustifyContentClasses = (
     : ''
 ]
 
-const getAlingItemsClasses = (props: AlignItemsProps): Array<string> => [
+export const getAlingItemsClasses = (props: AlignItemsProps): Array<string> => [
   props.alignItems && props.alignItems !== undefined
     ? 'align-items-' + props.alignItems
     : '',
@@ -148,7 +148,7 @@ const getAlingItemsClasses = (props: AlignItemsProps): Array<string> => [
     : ''
 ]
 
-const getGutterClasses = (props: GutterProps): Array<string> => [
+export const getGutterClasses = (props: GutterProps): Array<string> => [
   props.g && props.g !== undefined ? 'g-' + props.g : '',
   props.gSm && props.gSm !== undefined ? 'g-sm-' + props.gSm : '',
   props.gMd && props.gMd !== undefined ? 'g-md-' + props.gMd : '',
@@ -169,7 +169,7 @@ const getGutterClasses = (props: GutterProps): Array<string> => [
   props.gyXxl && props.gyXxl !== undefined ? 'gy-xxl-' + props.gyXxl : ''
 ]
 
-const getVisibleClasses = (props: VisibleProps): Array<string> => [
+export const getVisibleClasses = (props: VisibleProps): Array<string> => [
   props.visible && props.visible !== undefined ? 'd-block' : '',
   props.visibleSm && props.visibleSm !== undefined ? 'd-sm-block' : '',
   props.visibleMd && props.visibleMd !== undefined ? 'd-md-block' : '',
@@ -178,7 +178,7 @@ const getVisibleClasses = (props: VisibleProps): Array<string> => [
   props.visibleXll && props.visibleXll !== undefined ? 'd-xll-block' : ''
 ]
 
-const getHiddenClasses = (props: HidddenProps): Array<string> => [
+export const getHiddenClasses = (props: HidddenProps): Array<string> => [
   props.hidden && props.hidden !== undefined ? 'd-none' : '',
   props.hiddenSm && props.hiddenSm !== undefined ? 'd-sm-none' : '',
   props.hiddenMd && props.hiddenMd !== undefined ? 'd-md-none' : '',
@@ -187,7 +187,7 @@ const getHiddenClasses = (props: HidddenProps): Array<string> => [
   props.hiddenXll && props.hiddenXll !== undefined ? 'd-xll-none' : ''
 ]
 
-const getRowClasses = (props: RowProps): Array<string> => [
+export const getRowClasses = (props: RowProps): Array<string> => [
   'row',
   props.rowCols && props.rowCols !== undefined
     ? 'row-cols-' + props.rowCols
@@ -278,7 +278,7 @@ export const colClasses = (
     getHiddenClasses(hiddenProps)
   )
 
-const getContainerClasses = (props: ContainerProps): Array<string> => [
+const getContainerClasses = (props: ContainerPropsTypes): Array<string> => [
   props.fluid ? 'container-fluid' : 'container',
   props.sm ? 'container-sm' : '',
   props.md ? 'container-md' : '',
@@ -287,5 +287,5 @@ const getContainerClasses = (props: ContainerProps): Array<string> => [
   props.xxl ? 'container-xxl' : ''
 ]
 
-export const containerClasses = (containerProps: ContainerProps): string =>
+export const containerClasses = (containerProps: ContainerPropsTypes): string =>
   cs(getContainerClasses(containerProps))

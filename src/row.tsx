@@ -1,13 +1,13 @@
 import { forwardRef } from 'react'
 import type {
-  Ref,
   RowProps,
   MarginProps,
   GutterProps,
   JustifyContentProps,
   AlignItemsProps,
   PaddingProps,
-  RowPropsTypes
+  RowPropsTypes,
+  Ref
 } from './types'
 import { rowClasses } from './utils/get-classes'
 
@@ -18,6 +18,7 @@ const Row = forwardRef<Ref, RowPropsTypes>(({ children, ...props }, ref) => {
   const { ...marginProps }: MarginProps = props
   const { ...gutterProps }: GutterProps = props
   const { ...paddingProps }: PaddingProps = props
+
   return (
     <div
       className={rowClasses(
@@ -35,16 +36,5 @@ const Row = forwardRef<Ref, RowPropsTypes>(({ children, ...props }, ref) => {
     </div>
   )
 })
-
-Row.defaultProps = {
-  rowCols: false,
-  rowColsSm: false,
-  rowColsMd: false,
-  rowColsLg: false,
-  rowColsXl: false,
-  rowColsXxl: false
-}
-
-Row.displayName = 'Row'
 
 export default Row

@@ -1,31 +1,37 @@
 import { render, screen } from '@testing-library/react'
-import Row from '../row'
-import type { RowPropsTypes } from '../types'
 
-const customRender = (props?: RowPropsTypes) => {
-  return render(<Row {...props} />)
-}
+import Row from '../row'
 
 describe('Row', () => {
   test('render Row component', () => {
-    customRender()
+    render(
+      <Row>
+        <h1>ROW</h1>
+      </Row>
+    )
     const row = screen.getByTestId('row')
     expect(row).toBeInTheDocument()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toHaveClass('row')
     expect(row).toMatchSnapshot()
   })
 
   test('render Row with row props', () => {
-    customRender({
-      rowCols: '1',
-      rowColsSm: '2',
-      rowColsMd: '3',
-      rowColsLg: '4',
-      rowColsXl: '5',
-      rowColsXxl: '6'
-    })
+    render(
+      <Row
+        rowCols='1'
+        rowColsSm='2'
+        rowColsMd='3'
+        rowColsLg='4'
+        rowColsXl='5'
+        rowColsXxl='6'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
     const row = screen.getByTestId('row')
     expect(row).toBeInTheDocument()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toMatchSnapshot()
     expect(row).toHaveClass('row-cols-1')
     expect(row).toHaveClass('row-cols-sm-2')
@@ -36,16 +42,22 @@ describe('Row', () => {
   })
 
   test('render Row with justify-content props', () => {
-    customRender({
-      justifyContent: 'around',
-      justifyContentSm: 'between',
-      justifyContentMd: 'center',
-      justifyContentLg: 'end',
-      justifyContentXl: 'evenly',
-      justifyContentXxl: 'start'
-    })
+    render(
+      <Row
+        justifyContent='around'
+        justifyContentSm='between'
+        justifyContentMd='center'
+        justifyContentLg='end'
+        justifyContentXl='evenly'
+        justifyContentXxl='start'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
     const row = screen.getByTestId('row')
+    expect(row).toBeInTheDocument()
     expect(row).toMatchSnapshot()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toHaveClass('justify-content-around')
     expect(row).toHaveClass('justify-content-sm-between')
     expect(row).toHaveClass('justify-content-md-center')
@@ -55,16 +67,23 @@ describe('Row', () => {
   })
 
   test('render Row with align items props', () => {
-    customRender({
-      alignItems: 'start',
-      alignItemsSm: 'stretch',
-      alignItemsMd: 'baseline',
-      alignItemsLg: 'center',
-      alignItemsXl: 'end',
-      alignItemsXxl: 'end'
-    })
+    render(
+      <Row
+        alignItems='start'
+        alignItemsSm='stretch'
+        alignItemsMd='baseline'
+        alignItemsLg='center'
+        alignItemsXl='end'
+        alignItemsXxl='end'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
+
     const row = screen.getByTestId('row')
+    expect(row).toBeInTheDocument()
     expect(row).toMatchSnapshot()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toHaveClass('align-items-start')
     expect(row).toHaveClass('align-items-sm-stretch')
     expect(row).toHaveClass('align-items-md-baseline')
@@ -74,52 +93,58 @@ describe('Row', () => {
   })
 
   test('render Row with margin props', () => {
-    customRender({
-      m: '1',
-      mSm: '1',
-      mMd: '1',
-      mLg: '1',
-      mXl: '1',
-      mXxl: '1',
-      mx: '1',
-      mxSm: '1',
-      mxMd: '1',
-      mxLg: '1',
-      mxXl: '1',
-      mxXxl: '1',
-      my: '1',
-      mySm: '1',
-      myMd: '1',
-      myLg: '1',
-      myXl: '1',
-      myXxl: '1',
-      mb: '1',
-      mbSm: '1',
-      mbMd: '1',
-      mbLg: '1',
-      mbXl: '1',
-      mbXxl: '1',
-      mt: '1',
-      mtSm: '1',
-      mtMd: '1',
-      mtLg: '1',
-      mtXl: '1',
-      mtXxl: '1',
-      ms: '1',
-      msSm: '1',
-      msMd: '1',
-      msLg: '1',
-      msXl: '1',
-      msXxl: '1',
-      me: '1',
-      meSm: '1',
-      meMd: '1',
-      meLg: '1',
-      meXl: '1',
-      meXxl: '1'
-    })
+    render(
+      <Row
+        m='1'
+        mSm='1'
+        mMd='1'
+        mLg='1'
+        mXl='1'
+        mXxl='1'
+        mx='1'
+        mxSm='1'
+        mxMd='1'
+        mxLg='1'
+        mxXl='1'
+        mxXxl='1'
+        my='1'
+        mySm='1'
+        myMd='1'
+        myLg='1'
+        myXl='1'
+        myXxl='1'
+        mb='1'
+        mbSm='1'
+        mbMd='1'
+        mbLg='1'
+        mbXl='1'
+        mbXxl='1'
+        mt='1'
+        mtSm='1'
+        mtMd='1'
+        mtLg='1'
+        mtXl='1'
+        mtXxl='1'
+        ms='1'
+        msSm='1'
+        msMd='1'
+        msLg='1'
+        msXl='1'
+        msXxl='1'
+        me='1'
+        meSm='1'
+        meMd='1'
+        meLg='1'
+        meXl='1'
+        meXxl='1'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
+
     const row = screen.getByTestId('row')
     expect(row).toBeInTheDocument()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toMatchSnapshot()
     expect(row).toHaveClass('row')
     expect(row).toHaveClass('m-1')
@@ -167,28 +192,35 @@ describe('Row', () => {
   })
 
   test('render Row with gutter props', () => {
-    customRender({
-      g: '0',
-      gSm: '1',
-      gMd: '2',
-      gLg: '3',
-      gXl: '4',
-      gXxl: '5',
-      gx: '0',
-      gxSm: '1',
-      gxMd: '2',
-      gxLg: '3',
-      gxXl: '4',
-      gxXxl: '5',
-      gy: '0',
-      gySm: '1',
-      gyMd: '2',
-      gyLg: '3',
-      gyXl: '4',
-      gyXxl: '5'
-    })
+    render(
+      <Row
+        g='0'
+        gSm='1'
+        gMd='2'
+        gLg='3'
+        gXl='4'
+        gXxl='5'
+        gx='0'
+        gxSm='1'
+        gxMd='2'
+        gxLg='3'
+        gxXl='4'
+        gxXxl='5'
+        gy='0'
+        gySm='1'
+        gyMd='2'
+        gyLg='3'
+        gyXl='4'
+        gyXxl='5'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
+
     const row = screen.getByTestId('row')
     expect(row).toMatchSnapshot()
+    expect(row).toBeInTheDocument()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toHaveClass('g-0')
     expect(row).toHaveClass('g-sm-1')
     expect(row).toHaveClass('g-md-2')
@@ -210,51 +242,58 @@ describe('Row', () => {
   })
 
   test('render Row with padding props', () => {
-    customRender({
-      p: '0',
-      pSm: '1',
-      pMd: '2',
-      pLg: '3',
-      pXl: '4',
-      pXxl: '5',
-      px: '0',
-      pxSm: '1',
-      pxMd: '2',
-      pxLg: '3',
-      pxXl: '4',
-      pxXxl: '5',
-      py: '0',
-      pySm: '1',
-      pyMd: '2',
-      pyLg: '3',
-      pyXl: '4',
-      pyXxl: '5',
-      pb: '0',
-      pbSm: '1',
-      pbMd: '2',
-      pbLg: '3',
-      pbXl: '4',
-      pbXxl: '5',
-      pt: '0',
-      ptSm: '1',
-      ptMd: '2',
-      ptLg: '3',
-      ptXl: '4',
-      ptXxl: '5',
-      ps: '0',
-      psSm: '1',
-      psMd: '2',
-      psLg: '3',
-      psXl: '4',
-      psXxl: '5',
-      pe: '0',
-      peSm: '1',
-      peMd: '2',
-      peLg: '3',
-      peXl: '4',
-      peXxl: '5'
-    })
+    render(
+      <Row
+        p='0'
+        pSm='1'
+        pMd='2'
+        pLg='3'
+        pXl='4'
+        pXxl='5'
+        px='0'
+        pxSm='1'
+        pxMd='2'
+        pxLg='3'
+        pxXl='4'
+        pxXxl='5'
+        py='0'
+        pySm='1'
+        pyMd='2'
+        pyLg='3'
+        pyXl='4'
+        pyXxl='5'
+        pb='0'
+        pbSm='1'
+        pbMd='2'
+        pbLg='3'
+        pbXl='4'
+        pbXxl='5'
+        pt='0'
+        ptSm='1'
+        ptMd='2'
+        ptLg='3'
+        ptXl='4'
+        ptXxl='5'
+        ps='0'
+        psSm='1'
+        psMd='2'
+        psLg='3'
+        psXl='4'
+        psXxl='5'
+        pe='0'
+        peSm='1'
+        peMd='2'
+        peLg='3'
+        peXl='4'
+        peXxl='5'
+      >
+        <h1>ROW</h1>
+      </Row>
+    )
+
     const row = screen.getByTestId('row')
+    expect(row).toBeInTheDocument()
+    expect(row).toHaveTextContent('ROW')
     expect(row).toMatchSnapshot()
     expect(row).toHaveClass('p-0')
     expect(row).toHaveClass('p-sm-1')

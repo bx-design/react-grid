@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export type Cols = boolean | 'auto' | '1' | '2' | '3' | '4' | '5' | '6'
 
 export type JustifyContentType =
@@ -207,13 +209,6 @@ export type RowProps = {
   rowColsXxl?: Cols
 }
 
-export type RowPropsTypes = RowProps &
-  MarginProps &
-  GutterProps &
-  JustifyContentProps &
-  AlignItemsProps &
-  PaddingProps
-
 export type OrderProps = {
   order?: OrderTypes
   orderSm?: OrderTypes
@@ -241,21 +236,36 @@ export type ColProps = {
   xxl?: ColSizes
 }
 
+export type GeneralTypes = {
+  children?: ReactNode
+}
+
+export type Ref = HTMLDivElement
+
+export type ReactHTMLProps = HTMLDivElement
+
+export type RowPropsTypes = RowProps &
+  MarginProps &
+  GutterProps &
+  JustifyContentProps &
+  AlignItemsProps &
+  PaddingProps &
+  GeneralTypes
+
 export type ColPropsTypes = ColProps &
   OrderProps &
   OffsetProps &
   MarginProps &
   PaddingProps &
   VisibleProps &
-  HidddenProps
+  HidddenProps &
+  GeneralTypes
 
-export type ContainerProps = {
+export type ContainerPropsTypes = {
   fluid?: boolean
   sm?: boolean
   md?: boolean
   lg?: boolean
   xl?: boolean
   xxl?: boolean
-}
-
-export type Ref = HTMLDivElement
+} & GeneralTypes
