@@ -1,5 +1,9 @@
 import { ReactNode } from 'react'
 
+export interface DefaultProps {
+  className?: string
+}
+
 export type Cols = boolean | 'auto' | '1' | '2' | '3' | '4' | '5' | '6'
 
 export type JustifyContentType =

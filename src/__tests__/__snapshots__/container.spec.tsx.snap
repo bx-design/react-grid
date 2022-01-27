@@ -2,29 +2,7 @@
 
 exports[`Container render Container component 1`] = `
 <div
-  class="container"
-  data-testid="container"
->
-  <h1>
-    CONTAINER
-  </h1>
-</div>
-`;
-
-exports[`Container render Container with breakpoints props 1`] = `
-<div
-  class="container container-sm container-md container-lg container-xl container-xxl"
-  data-testid="container"
->
-  <h1>
-    CONTAINER
-  </h1>
-</div>
-`;
-
-exports[`Container render Container with fluid prop 1`] = `
-<div
-  class="container-fluid"
+  class="bx-container"
   data-testid="container"
 >
   <h1>

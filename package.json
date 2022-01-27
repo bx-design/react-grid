@@ -1,6 +1,6 @@
 {
   "name": "@bx-design/react-grid",
-  "version": "0.1.8",
+  "version": "0.2.4",
   "repository": "git@github.com:bx-design/react-grid.git",
   "author": "BX Creative Studio",
   "license": "MIT",
@@ -12,11 +12,11 @@
     "esm/**"
   ],
   "scripts": {
-    "build": "yarn build:esm && yarn build:cjs && yarn build:css-dist && yarn build:css-esm",
-    "build:cjs": "rimraf ./dist && ncc build src/index.tsx -o dist -m -e react",
+    "build": "yarn build:esm && yarn build:cjs && yarn build:tws-dist && yarn build:tws-esm",
+    "build:cjs": "rimraf ./dist && ncc build src/index.ts -o dist -m -e react",
     "build:esm": "rimraf ./esm && tsc --module ES6 --outDir esm",
-    "build:css-dist": "cpy 'src/styles/bx-grid.min.css' dist/styles",
-    "build:css-esm": "cpy 'src/styles/bx-grid.min.css' esm/styles",
+    "build:tws-dist": "rimraf ./dist/tws-plugin && recursive-copy 'src/tws-plugin' dist/tws-plugin",
+    "build:tws-esm": "rimraf ./esm/tws-plugin && recursive-copy 'src/tws-plugin' esm/tws-plugin",
     "watch": "tsc --watch",
     "watch:esm": "tsc --module ES6 --outDir esm --target esnext --watch",
     "types:check": "tsc --noEmit",
@@ -40,42 +40,36 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@types/jest": "^26.0.20",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.1",
-    "@types/testing-library__jest-dom": "^5.9.5",
-    "@typescript-eslint/eslint-plugin": "^4.16.1",
-    "@typescript-eslint/parser": "^4.16.1",
-    "@vercel/ncc": "^0.27.0",
-    "@vercel/webpack-asset-relocator-loader": "^1.2.1",
-    "babel-eslint": "^10.1.0",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.4.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@types/testing-library__jest-dom": "^5.14.2",
+    "@vercel/ncc": "^0.33.1",
+    "autoprefixer": "^10.4.2",
     "cp-cli": "^2.0.0",
     "cpy-cli": "^3.1.1",
-    "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "husky": "^5.1.3",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.3.1",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "recursive-copy-cli": "^1.0.20",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.3",
-    "typescript": "^4.2.3"
+    "tailwindcss": "^3.0.16",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0"
+    "react": "^17.0.2"
   },
   "peerDependenciesMeta": {
     "react-dom": {
@@ -83,7 +77,6 @@
     }
   },
   "dependencies": {
-    "@types/classnames": "^2.2.11",
-    "classnames": "^2.2.6"
+    "clsx": "^1.1.1"
   }
 }

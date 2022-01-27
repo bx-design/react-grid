@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Container from '../container'
+import { Container } from '../container'
 
 describe('Container', () => {
   test('render Container component', () => {
@@ -12,7 +12,7 @@ describe('Container', () => {
     expect(container).toBeInTheDocument()
     expect(container).toBeInTheDocument()
     expect(container).toHaveTextContent('CONTAINER')
-    expect(container).toHaveClass('container')
+    expect(container).toHaveClass('bx-container')
     expect(container).toMatchSnapshot()
   })
 
@@ -25,8 +25,7 @@ describe('Container', () => {
     const container = screen.getByTestId('container')
     expect(container).toBeInTheDocument()
     expect(container).toHaveTextContent('CONTAINER')
-    expect(container).toHaveClass('container-fluid')
-    expect(container).toMatchSnapshot()
+    expect(container).toHaveClass('bx-container-fluid')
   })
 
   test('render Container with breakpoints props', () => {
@@ -39,11 +38,24 @@ describe('Container', () => {
     const container = screen.getByTestId('container')
     expect(container).toBeInTheDocument()
     expect(container).toHaveTextContent('CONTAINER')
-    expect(container).toHaveClass('container-sm')
-    expect(container).toHaveClass('container-md')
-    expect(container).toHaveClass('container-lg')
-    expect(container).toHaveClass('container-xl')
-    expect(container).toHaveClass('container-xxl')
-    expect(container).toMatchSnapshot()
+    expect(container).toHaveClass('bx-container-sm')
+    expect(container).toHaveClass('bx-container-md')
+    expect(container).toHaveClass('bx-container-lg')
+    expect(container).toHaveClass('bx-container-xl')
+    expect(container).toHaveClass('bx-container-xxl')
+  })
+
+  test('render Container with other classNames', () => {
+    render(
+      <Container className='w-full'>
+        <h1>CONTAINER</h1>
+      </Container>
+    )
+
+    const container = screen.getByTestId('container')
+    expect(container).toBeInTheDocument()
+    expect(container).toHaveTextContent('CONTAINER')
+    expect(container).toHaveClass('bx-container')
+    expect(container).toHaveClass('w-full')
   })
 })
