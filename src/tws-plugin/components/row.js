@@ -406,7 +406,7 @@ module.exports = Row = () => ({
     '--bx-gutter-x': '1.5rem',
     '--bx-gutter-y': '0',
     '@apply flex flex-wrap': {},
-    '@apply mt-[calc(var(--bx-gutter-y)*-1)] mr-[calc(var(--bx-gutter-x)*-1)] ml-[calc(var(--bx-gutter-x)*-1)]':
+    '@apply mt-[calc(var(--bx-gutter-y)*-1)] mr-[calc(var(--bx-gutter-x)/-2)] ml-[calc(var(--bx-gutter-x)/-2)]':
       {},
     '& > *': {
       '@apply shrink-0 w-full max-w-full': {},
